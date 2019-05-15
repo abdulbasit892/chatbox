@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="chatroom.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav__bar">
+      <div>
+        <img src="img/logo.png" alt="logo" id="logo" />
+        <h1>Chat Box</h1>
+      </div>
+      <div class="user">
+        <div></div>
+        <div id="search">
+          <div class="inn">
+            <a href="JavaScript:Void(0);"><i class="fas fa-search"></i></a>
+            <form action="get" id="searchForm">
+              <input
+                type="text"
+                placeholder="Search More Rooms"
+                id="searchQuery"
+              />
+            </form>
+          </div>
+        </div>
+        <img src="img/avatar0.png" alt="user" />
+        <h1 id="userName"></h1>
+        <i id="logLink" class="fas fa-sort-down"></i>
+        <div class="moreFunctions displaying" id="moreFunctions">
+          <ul>
+            <li>log Out</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="general__List">
+        <div class="current__room" id="current_room__info">
+          <!-- <div class="current__room__logo">
+            <img src="img/logo.png" alt="room" />
+          </div>
+          <div class="current__room__details">
+            <h1>The Daily Shit Show</h1>
+            <p>created on 11-March-2019</p>
+            <h2>Active Users : <span>25</span></h2>
+          </div> -->
+        </div>
+        <div class="all__rooms">
+          <div class="chat__room__banner">
+            <p>CHAT ROOMS</p>
+          </div>
+
+          <div class="chat__rooms__div">
+            <ul id="chat__rooms">
+              <!-- 
+              <li>UEFA Champions Leagues</li>
+              <li>Bollywoods Movies</li>
+              <li>Dawn News</li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="chat__messages">
+        <div class="messgenger__header">
+          <div>
+            <div>
+              <h1>Admin Name : <span id="admin__name"></span></h1>
+            </div>
+            <div class="invite" id="inviteLink">
+              <i class="fas fa-plus"></i><span>invite</span>
+            </div>
+          </div>
+        </div>
+        <div class="messages">
+          <ul id="messages">
+            <!-- <li><span>abdulbasit</span> hey</li> -->
+          </ul>
+        </div>
+        <div class="massenger__footer">
+          <input
+            type="text"
+            placeholder="Type messages here ..."
+            id="message"
+          />
+          <div id="sent__message">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+        </div>
+      </div>
+      <div class="user__list">
+        <ul id="userList">
+          <!-- <li>
+            <img src="img/avatar.png" alt="user" />
+            <h4>AbdulBasit</h4>
+          </li>
+          <li>
+            <img src="img/avatar.png" alt="user" />
+            <h4>Ahmed Abdullah</h4>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+    <div id="snackbar">Some text some message..</div>
+  </body>
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBujXjkQoW_UUaxhKX8dHPXI74JhDqmxtg",
+      authDomain: "chatbox-a4c6e.firebaseapp.com",
+      databaseURL: "https://chatbox-a4c6e.firebaseio.com",
+      projectId: "chatbox-a4c6e",
+      storageBucket: "chatbox-a4c6e.appspot.com",
+      messagingSenderId: "108316942003"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="chatroom.js"></script>
+</html>

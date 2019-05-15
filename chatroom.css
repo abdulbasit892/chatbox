@@ -1,0 +1,704 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none; }
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0; }
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+img {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+.nav__bar {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background: #142d4c;
+  justify-content: start;
+  color: white;
+  cursor: pointer; }
+  .nav__bar > div {
+    display: flex;
+    margin-left: 10%; }
+    .nav__bar > div > img {
+      width: 50px;
+      height: 50px;
+      margin: auto 10px; }
+    .nav__bar > div > h1 {
+      margin: auto 10px;
+      font-size: 1.3vw; }
+    .nav__bar > div > i {
+      margin: auto 10px;
+      padding: 10px; }
+  .nav__bar .user {
+    margin-left: auto;
+    margin-right: 10%;
+    position: relative; }
+    .nav__bar .user > img {
+      width: 30px;
+      height: 30px; }
+    .nav__bar .user .moreFunctions {
+      background: #ececec;
+      border-radius: 5px;
+      position: absolute;
+      left: 50%;
+      z-index: 100;
+      top: 80%; }
+      .nav__bar .user .moreFunctions > ul {
+        margin: 20px;
+        color: #142d4c; }
+
+.container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  overflow: hidden;
+  color: #385170; }
+  .container .general__List {
+    width: 18%;
+    background: #fafafa;
+    height: 100%; }
+    .container .general__List .current__room {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .container .general__List .current__room .current__room__logo {
+        margin: 0; }
+        .container .general__List .current__room .current__room__logo > img {
+          width: 80px;
+          height: 80px; }
+      .container .general__List .current__room .current__room__details {
+        display: flex;
+        height: 10vh;
+        flex-direction: column;
+        margin-top: 15px; }
+        .container .general__List .current__room .current__room__details > p {
+          margin: 8px 0;
+          color: grey;
+          font-size: 12px; }
+    .container .general__List .all__rooms {
+      height: 80vh;
+      border-top: 1px #ced6e0 solid;
+      border-bottom: 1px #ced6e0 solid; }
+      .container .general__List .all__rooms .chat__room__banner {
+        height: 6%; }
+        .container .general__List .all__rooms .chat__room__banner > p {
+          font-size: 20px;
+          color: grey;
+          margin: 20px;
+          font-weight: bolder; }
+      .container .general__List .all__rooms .chat__rooms__div {
+        height: 94%;
+        overflow: scroll; }
+        .container .general__List .all__rooms .chat__rooms__div > ul > li {
+          cursor: pointer;
+          padding: 10px;
+          border-top: 1px #ced6e0 solid; }
+          .container .general__List .all__rooms .chat__rooms__div > ul > li:nth-child(odd) {
+            background: #ececec; }
+  .container .chat__messages {
+    width: 60%;
+    background: #fafafa;
+    border-right: 1px #ced6e0 solid;
+    border-left: 1px #ced6e0 solid;
+    height: 100%; }
+    .container .chat__messages .messgenger__header {
+      width: 100%;
+      height: 8%;
+      background: #f7b633;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .container .chat__messages .messgenger__header > div {
+        display: flex;
+        justify-content: space-between;
+        position: relative; }
+        .container .chat__messages .messgenger__header > div > div > h1 {
+          font-size: 18px;
+          color: #ececec;
+          padding: 10px;
+          margin: auto 0; }
+          .container .chat__messages .messgenger__header > div > div > h1 > span {
+            margin-left: 10px;
+            font-weight: bold;
+            font-family: "Nunito", sans-serif;
+            color: red;
+            text-transform: uppercase; }
+        .container .chat__messages .messgenger__header > div .invite {
+          background: red;
+          margin-right: 20px;
+          height: fit-content;
+          border-radius: 20px;
+          padding: 10px;
+          font-family: "Nunito", sans-serif;
+          font-weight: bolder;
+          width: fit-content;
+          color: white; }
+          .container .chat__messages .messgenger__header > div .invite > i {
+            font-size: 12px; }
+            .container .chat__messages .messgenger__header > div .invite > i ~ span {
+              display: none;
+              margin-left: 5px; }
+          .container .chat__messages .messgenger__header > div .invite:hover > i ~ span {
+            display: inline; }
+    .container .chat__messages .messages {
+      width: 100%;
+      height: 84%;
+      overflow-y: scroll; }
+      .container .chat__messages .messages > ul > li {
+        margin: 10px;
+        padding: 20px 10px;
+        width: fit-content;
+        background: #ced6e0;
+        border-radius: 20px; }
+        .container .chat__messages .messages > ul > li > span {
+          background: #142d4c;
+          color: white;
+          padding: 10px;
+          border-radius: 20px;
+          margin-right: 10px; }
+    .container .chat__messages .massenger__footer {
+      display: flex;
+      width: 100%;
+      height: 7%;
+      background: white; }
+      .container .chat__messages .massenger__footer > input {
+        position: relative;
+        margin: 0;
+        padding-left: 20px;
+        width: 100%;
+        height: 100%;
+        outline: none; }
+      .container .chat__messages .massenger__footer > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .container .chat__messages .massenger__footer > div > i {
+          vertical-align: middle;
+          left: 74%;
+          position: absolute; }
+          .container .chat__messages .massenger__footer > div > i:hover {
+            transform: scale(1.2);
+            color: #142d4c; }
+  .container .user__list {
+    width: 22%;
+    background: #fafafa;
+    height: inherit;
+    overflow-y: scroll; }
+    .container .user__list > ul {
+      font-family: "Nunito", sans-serif;
+      margin: 10px; }
+      .container .user__list > ul > li {
+        width: 100%;
+        margin: 10px 2px;
+        background: #d7eaea;
+        border-radius: 20px; }
+        .container .user__list > ul > li > img {
+          padding: 5px;
+          width: 40px;
+          height: 40px; }
+        .container .user__list > ul > li > h4 {
+          margin-left: 10px;
+          display: inline; }
+
+.loader {
+  margin: 5rem auto;
+  text-align: center; }
+
+.loader svg {
+  height: 5.5rem;
+  width: 5.5rem;
+  fill: #142d4c;
+  transform-origin: 44% 50%;
+  animation: rotate 1.5s infinite linear; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes flexGrow {
+  to {
+    flex: 1; } }
+::-webkit-scrollbar {
+  width: 2px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: silver; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff6f61; }
+
+#search {
+  margin: auto 10px;
+  position: relative;
+  overflow: hidden;
+  height: 30px;
+  border-radius: 20px;
+  width: 30px; }
+  #search > div a > i {
+    padding: 7px;
+    margin: 0;
+    color: white; }
+  #search > div > form > input {
+    border: none;
+    display: none;
+    bottom: 28px;
+    left: 35px;
+    position: relative;
+    padding: 5px;
+    margin: 0;
+    background: white;
+    color: #142d4c; }
+  #search:hover {
+    border: 1px white solid;
+    background: white;
+    transition: 0.3s;
+    width: 290px; }
+    #search:hover a > i {
+      color: #142d4c; }
+    #search:hover form > input {
+      display: inline; }
+
+.displaying {
+  display: none; }
+
+#snackbar {
+  min-width: 250px;
+  /* Set a default minimum width */
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  background-color: #333;
+  /* Black background color */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Centered text */
+  border-radius: 2px;
+  /* Rounded borders */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 100;
+  /* Add a z-index if needed */
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 30px;
+  /* 30px from the bottom */
+  opacity: 0; }
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  animation: fadein 7s; }
+
+@keyframes fadein {
+  10% {
+    bottom: 350px;
+    opacity: 1; }
+  100% {
+    bottom: 350px;
+    opacity: 1; } }
+.highlight {
+  background: #142d4c !important;
+  color: white; }
+
+.remove > li:hover::after {
+  content: '<i class="fas fa-times"></i>'; }
+
+/*# sourceMappingURL=chatroom.css.map */

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ChatBox</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner">
+        <h1>ChatBox</h1>
+      </div>
+      <div class="form">
+        <div class="form__inner__container">
+          <div class="button">
+            <button id="login__button">Login</button>
+            <button id="signup__button">SignUp</button>
+          </div>
+          <div class="Login__form" id="Login__form">
+            <input type="email" placeholder="email" id="email__login" />
+            <input
+              type="password"
+              placeholder="password"
+              id="password__login"
+            />
+            <a href="#">
+              <input type="button" value="Login" id="login" />
+            </a>
+          </div>
+          <div class="Signup__form" id="Signup__form">
+            <input type="text" placeholder="Username" id="name__signup" />
+            <input type="text" placeholder="Room Name" id="Room__name" />
+            <input
+              type="email"
+              placeholder="email"
+              id="email__signup"
+              required
+            />
+            <input
+              type="password"
+              placeholder="password"
+              id="password__signup"
+            />
+            <a href="#">
+              <input type="button" value="SignUp" id="signup" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBujXjkQoW_UUaxhKX8dHPXI74JhDqmxtg",
+        authDomain: "chatbox-a4c6e.firebaseapp.com",
+        databaseURL: "https://chatbox-a4c6e.firebaseio.com",
+        projectId: "chatbox-a4c6e",
+        storageBucket: "chatbox-a4c6e.appspot.com",
+        messagingSenderId: "108316942003"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>
